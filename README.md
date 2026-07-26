@@ -4,6 +4,23 @@ Liest die Live-Messwerte der Wetterstation des Solarhauses der
 Technischen Hochschule Lübeck (https://wetter.th-luebeck.de/) alle 5
 Minuten aus und stellt sie als Sensor-Entities in Home Assistant bereit.
 
+## Installation via HACS (empfohlen)
+
+1. In Home Assistant **HACS → oben rechts die drei Punkte →
+   Benutzerdefinierte Repositories** öffnen.
+2. Repository-URL eintragen: `https://github.com/jetlon/TH-Luebeck-Wetter`
+3. Kategorie **Integration** auswählen → **Hinzufügen**.
+4. Danach in HACS nach **„THL Campus Wetterstation"** suchen und
+   herunterladen.
+5. Home Assistant **vollständig neu starten** (siehe Hinweis unten – ein
+   YAML-Reload reicht bei neuen Custom Integrations nicht).
+6. **Einstellungen → Geräte & Dienste → Integration hinzufügen** →
+   „THL Campus Wetterstation" suchen → hinzufügen. Es sind keine weiteren
+   Eingaben nötig.
+
+Updates erscheinen künftig automatisch in HACS, sobald ein neuer
+GitHub-Release/Tag im Repo veröffentlicht wird.
+
 ## Installation (manuell, ohne HACS)
 
 1. Den Ordner `custom_components/thl_wetter` in dein Home Assistant
@@ -61,11 +78,8 @@ offensichtlich falsch erscheinen (z. B. Temperatur und Luftdruck
 vertauscht), bitte den Zustand der Entities bzw. die Roh-CSV prüfen –
 die Spaltenindizes in `parse_csv()` lassen sich leicht anpassen.
 
-## Spätere Umwandlung in eine "echte" HACS-Integration
+## Repository
 
-Dieser Ordner ist bereits so aufgebaut, dass er 1:1 in ein GitHub-Repo
-übernommen werden kann. Für HACS zusätzlich nötig:
-- `hacs.json` im Repo-Root
-- Ein GitHub-Release/Tag
-- Repo bei HACS als "Custom Repository" (Kategorie: Integration)
-  hinzufügen
+- GitHub: https://github.com/jetlon/TH-Luebeck-Wetter
+- Releases: https://github.com/jetlon/TH-Luebeck-Wetter/releases
+- Issues/Bugs: https://github.com/jetlon/TH-Luebeck-Wetter/issues

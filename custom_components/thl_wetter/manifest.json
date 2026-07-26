@@ -1,11 +1,11 @@
 {
   "domain": "thl_wetter",
   "name": "THL Campus Wetterstation",
-  "codeowners": [],
+  "codeowners": ["@jetlon"],
   "config_flow": true,
-  "documentation": "https://wetter.th-luebeck.de/",
+  "documentation": "https://github.com/jetlon/TH-Luebeck-Wetter",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://wetter.th-luebeck.de/",
+  "issue_tracker": "https://github.com/jetlon/TH-Luebeck-Wetter/issues",
   "requirements": [],
   "version": "1.1.0"
 }

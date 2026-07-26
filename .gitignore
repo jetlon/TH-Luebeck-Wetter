@@ -1,0 +1,11 @@
+# Interne Arbeitsnotizen / Referenzmaterial, nicht Teil der Integration
+thl_wetter_PROJECT_CONTEXT.md
+tabelle.png
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+.DS_Store

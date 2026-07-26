@@ -1,0 +1,40 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "THL Campus Wetterstation",
+        "description": "Richtet die Wetterstation des Solarhauses der Technischen Hochschule Lübeck ein. Es sind keine weiteren Angaben nötig."
+      }
+    },
+    "abort": {
+      "already_configured": "Diese Integration ist bereits eingerichtet."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": { "name": "Temperatur" },
+      "temperature_max": { "name": "Temperatur Maximum" },
+      "temperature_min": { "name": "Temperatur Minimum" },
+      "pressure": { "name": "Luftdruck" },
+      "pressure_max": { "name": "Luftdruck Maximum" },
+      "pressure_min": { "name": "Luftdruck Minimum" },
+      "humidity": { "name": "Luftfeuchtigkeit" },
+      "humidity_max": { "name": "Luftfeuchtigkeit Maximum" },
+      "humidity_min": { "name": "Luftfeuchtigkeit Minimum" },
+      "wind_speed": { "name": "Windgeschwindigkeit" },
+      "wind_speed_max": { "name": "Windgeschwindigkeit Maximum" },
+      "wind_speed_min": { "name": "Windgeschwindigkeit Minimum" },
+      "wind_direction": { "name": "Windrichtung" },
+      "radiation_direct": { "name": "Direkte Sonneneinstrahlung" },
+      "radiation_direct_max": { "name": "Direkte Sonneneinstrahlung Maximum" },
+      "radiation_direct_min": { "name": "Direkte Sonneneinstrahlung Minimum" },
+      "radiation_horizontal": { "name": "Sonneneinstrahlung horizontal" },
+      "radiation_horizontal_max": { "name": "Sonneneinstrahlung horizontal Maximum" },
+      "radiation_horizontal_min": { "name": "Sonneneinstrahlung horizontal Minimum" },
+      "radiation_30deg": { "name": "Sonneneinstrahlung 30°-Ebene" },
+      "radiation_30deg_max": { "name": "Sonneneinstrahlung 30°-Ebene Maximum" },
+      "radiation_30deg_min": { "name": "Sonneneinstrahlung 30°-Ebene Minimum" },
+      "last_update": { "name": "Letzte Aktualisierung (Station)" }
+    }
+  }
+}

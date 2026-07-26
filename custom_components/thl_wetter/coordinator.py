@@ -47,6 +47,27 @@ CHANNELS: tuple[tuple[str, int, bool], ...] = (
 )
 
 
+# Grenzwerte in W/m² für die textuelle Einstufung der direkten Sonneneinstrahlung.
+# Werte < 10 W/m² gelten als "Keine" (deckt auch Sensorrauschen um 0 bei Nacht ab).
+_RADIATION_LEVELS: tuple[tuple[float, str], ...] = (
+    (10, "Keine"),
+    (120, "Schwach"),
+    (350, "Mäßig"),
+    (600, "Stark"),
+)
+_RADIATION_LEVEL_MAX = "Sehr stark"
+
+
+def radiation_to_text(value: float | None) -> str | None:
+    """Wandelt einen Sonneneinstrahlungswert (W/m²) in eine grobe Einstufung um."""
+    if value is None:
+        return None
+    for threshold, label in _RADIATION_LEVELS:
+        if value < threshold:
+            return label
+    return _RADIATION_LEVEL_MAX
+
+
 def degrees_to_compass(degrees: float | None) -> str | None:
     """Wandelt eine Windrichtung in Grad in die 16-Punkte-Himmelsrichtung um."""
     if degrees is None:
@@ -126,6 +147,8 @@ def parse_csv(raw: bytes) -> dict[str, Any]:
         if has_min_max:
             data[f"{key}_max"] = val(col_index, max_idx)
             data[f"{key}_min"] = val(col_index, min_idx)
+
+    data["radiation_direct_text"] = radiation_to_text(data["radiation_direct"])
 
     return data
 

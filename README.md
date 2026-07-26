@@ -58,6 +58,8 @@ GitHub-Release/Tag im Repo veröffentlicht wird.
    - Windgeschwindigkeit (m/s)
    - Windrichtung (°)
    - Direkte Sonneneinstrahlung (W/m²)
+   - Direkte Sonneneinstrahlung Einstufung (Text: Keine/Schwach/Mäßig/
+     Stark/Sehr stark)
    - Sonneneinstrahlung horizontal (W/m²)
    - Sonneneinstrahlung 30°-Ebene (W/m²)
    - Letzte Aktualisierung (Station) – Diagnose-Sensor
@@ -66,9 +68,9 @@ GitHub-Release/Tag im Repo veröffentlicht wird.
    alle drei Sonneneinstrahlungs-Kanäle gibt es zusätzlich je einen
    Maximum- und Minimum-Sensor (bezogen auf das eingestellte
    Abfrageintervall). Windrichtung hat kein Maximum/Minimum, da die
-   Gradangabe umlaufend ist. Direkte Sonneneinstrahlung, Sonneneinstrahlung
-   horizontal, Sonneneinstrahlung 30°-Ebene sowie alle Maximum-/
-   Minimum-Sensoren sind standardmäßig deaktiviert.
+   Gradangabe umlaufend ist. Sonneneinstrahlung horizontal, Sonneneinstrahlung
+   30°-Ebene sowie alle Maximum-/Minimum-Sensoren sind standardmäßig
+   deaktiviert.
 
    Deaktivierte Sensoren kannst du in den Entity-Einstellungen jederzeit
    einschalten.

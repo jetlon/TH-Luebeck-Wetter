@@ -156,6 +156,12 @@ SENSOR_DESCRIPTIONS: tuple[ThlSensorDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
     ),
     ThlSensorDescription(
+        key="radiation_direct_text",
+        translation_key="radiation_direct_text",
+        name="Direkte Sonneneinstrahlung Einstufung",
+        icon="mdi:weather-sunny",
+    ),
+    ThlSensorDescription(
         key="radiation_direct_max",
         translation_key="radiation_direct_max",
         name="Direkte Sonneneinstrahlung Maximum",

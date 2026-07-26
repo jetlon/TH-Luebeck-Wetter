@@ -45,6 +45,7 @@
       "wind_speed_min": { "name": "Windgeschwindigkeit Minimum" },
       "wind_direction": { "name": "Windrichtung" },
       "radiation_direct": { "name": "Direkte Sonneneinstrahlung" },
+      "radiation_direct_text": { "name": "Direkte Sonneneinstrahlung Einstufung" },
       "radiation_direct_max": { "name": "Direkte Sonneneinstrahlung Maximum" },
       "radiation_direct_min": { "name": "Direkte Sonneneinstrahlung Minimum" },
       "radiation_horizontal": { "name": "Sonneneinstrahlung horizontal" },

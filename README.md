@@ -87,3 +87,29 @@ die Spaltenindizes in `parse_csv()` lassen sich leicht anpassen.
 - GitHub: https://github.com/jetlon/TH-Luebeck-Wetter
 - Releases: https://github.com/jetlon/TH-Luebeck-Wetter/releases
 - Issues/Bugs: https://github.com/jetlon/TH-Luebeck-Wetter/issues
+
+## Haftungsausschluss
+
+Dies ist ein privates, nicht-kommerzielles Hobby-Projekt ohne jede
+Verbindung zur Technischen Hochschule Lübeck. Die Integration greift
+lediglich auf eine öffentlich zugängliche Datenquelle der TH Lübeck zu;
+Betrieb, Inhalt und Verfügbarkeit dieser Datenquelle liegen außerhalb
+meines Einflussbereichs.
+
+Die Nutzung dieser Integration erfolgt vollständig auf eigene Gefahr. Sie
+wird „wie besehen" (as-is), ohne jegliche ausdrückliche oder
+stillschweigende Gewährleistung bereitgestellt – insbesondere ohne
+Zusicherung der Richtigkeit, Vollständigkeit, Aktualität oder
+Eignung der gelieferten Wetterdaten für einen bestimmten Zweck, und ohne
+Zusicherung eines fehlerfreien oder unterbrechungsfreien Betriebs.
+
+Jegliche Haftung für Schäden – gleich welcher Art und ob unmittelbar oder
+mittelbar –, die aus der Installation, Nutzung oder Fehlfunktion dieser
+Integration oder aus fehlerhaften, verzögerten oder ausbleibenden Daten
+der externen Wetterstation entstehen, ist im gesetzlich zulässigen Rahmen
+ausgeschlossen. Der Rechtsweg ist, soweit gesetzlich zulässig,
+ausgeschlossen.
+
+Nach deutschem Recht nicht ausschließbare Haftung – insbesondere für
+Vorsatz, grobe Fahrlässigkeit sowie Schäden an Leben, Körper oder
+Gesundheit – bleibt von diesem Ausschluss unberührt.

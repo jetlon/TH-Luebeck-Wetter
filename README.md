@@ -1,8 +1,9 @@
 # THL Campus Wetterstation – Custom Integration für Home Assistant
 
 Liest die Live-Messwerte der Wetterstation des Solarhauses der
-Technischen Hochschule Lübeck (https://wetter.th-luebeck.de/) alle 5
-Minuten aus und stellt sie als Sensor-Entities in Home Assistant bereit.
+Technischen Hochschule Lübeck (https://wetter.th-luebeck.de/) in einem
+einstellbaren Intervall aus und stellt sie als Sensor-Entities in Home
+Assistant bereit.
 
 ## Installation via HACS (empfohlen)
 
@@ -15,8 +16,8 @@ Minuten aus und stellt sie als Sensor-Entities in Home Assistant bereit.
 5. Home Assistant **vollständig neu starten** (siehe Hinweis unten – ein
    YAML-Reload reicht bei neuen Custom Integrations nicht).
 6. **Einstellungen → Geräte & Dienste → Integration hinzufügen** →
-   „THL Campus Wetterstation" suchen → hinzufügen. Es sind keine weiteren
-   Eingaben nötig.
+   „THL Campus Wetterstation" suchen → hinzufügen. Dabei wird das
+   **Abfrageintervall in Minuten** abgefragt (Standard: 15 Minuten).
 
 Updates erscheinen künftig automatisch in HACS, sobald ein neuer
 GitHub-Release/Tag im Repo veröffentlicht wird.
@@ -44,7 +45,10 @@ GitHub-Release/Tag im Repo veröffentlicht wird.
 
 3. Nach dem Neustart: **Einstellungen → Geräte & Dienste →
    Integration hinzufügen** → "THL Campus Wetterstation" suchen →
-   hinzufügen. Es sind keine weiteren Eingaben nötig.
+   hinzufügen. Dabei wird das **Abfrageintervall in Minuten** abgefragt
+   (Standard: 15 Minuten). Das Intervall lässt sich später jederzeit über
+   **Konfigurieren** bei der Integration ändern, ohne sie neu einrichten
+   zu müssen.
 
 4. Es erscheint ein Gerät "THL Campus Wetterstation" mit folgenden
    Entities:
@@ -60,8 +64,8 @@ GitHub-Release/Tag im Repo veröffentlicht wird.
 
    Für Temperatur, Luftdruck, Luftfeuchtigkeit, Windgeschwindigkeit sowie
    alle drei Sonneneinstrahlungs-Kanäle gibt es zusätzlich je einen
-   Maximum- und Minimum-Sensor (bezogen auf das aktuelle 15-Minuten-
-   Intervall der Station). Windrichtung hat kein Maximum/Minimum, da die
+   Maximum- und Minimum-Sensor (bezogen auf das eingestellte
+   Abfrageintervall). Windrichtung hat kein Maximum/Minimum, da die
    Gradangabe umlaufend ist. Direkte Sonneneinstrahlung, Sonneneinstrahlung
    horizontal, Sonneneinstrahlung 30°-Ebene sowie alle Maximum-/
    Minimum-Sensoren sind standardmäßig deaktiviert.

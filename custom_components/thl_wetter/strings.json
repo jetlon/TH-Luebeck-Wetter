@@ -3,11 +3,30 @@
     "step": {
       "user": {
         "title": "THL Campus Wetterstation",
-        "description": "Richtet die Wetterstation des Solarhauses der Technischen Hochschule Lübeck ein. Es sind keine weiteren Angaben nötig."
+        "description": "Richtet die Wetterstation des Solarhauses der Technischen Hochschule Lübeck ein.",
+        "data": {
+          "scan_interval_minutes": "Abfrageintervall (Minuten)"
+        },
+        "data_description": {
+          "scan_interval_minutes": "Wie oft die Live-CSV der Wetterstation abgerufen wird. Die Station selbst aktualisiert ihre Daten etwa alle 5 Minuten."
+        }
       }
     },
     "abort": {
       "already_configured": "Diese Integration ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "THL Campus Wetterstation – Optionen",
+        "data": {
+          "scan_interval_minutes": "Abfrageintervall (Minuten)"
+        },
+        "data_description": {
+          "scan_interval_minutes": "Wie oft die Live-CSV der Wetterstation abgerufen wird. Die Station selbst aktualisiert ihre Daten etwa alle 5 Minuten."
+        }
+      }
     }
   },
   "entity": {

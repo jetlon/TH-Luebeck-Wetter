@@ -9,11 +9,17 @@ from typing import Any
 import aiohttp
 import async_timeout
 
+from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from .const import DATA_URL, DOMAIN, SCAN_INTERVAL_SECONDS
+from .const import (
+    CONF_SCAN_INTERVAL_MINUTES,
+    DATA_URL,
+    DEFAULT_SCAN_INTERVAL_MINUTES,
+    DOMAIN,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -127,12 +133,15 @@ def parse_csv(raw: bytes) -> dict[str, Any]:
 class ThlWetterCoordinator(DataUpdateCoordinator[dict[str, Any]]):
     """Koordinator, der die Live-CSV der THL-Wetterstation periodisch abruft."""
 
-    def __init__(self, hass: HomeAssistant) -> None:
+    def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
+        scan_interval_minutes = entry.options.get(
+            CONF_SCAN_INTERVAL_MINUTES, DEFAULT_SCAN_INTERVAL_MINUTES
+        )
         super().__init__(
             hass,
             _LOGGER,
             name=DOMAIN,
-            update_interval=timedelta(seconds=SCAN_INTERVAL_SECONDS),
+            update_interval=timedelta(minutes=scan_interval_minutes),
         )
         self._session = async_get_clientsession(hass)
 
